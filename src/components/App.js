@@ -1,22 +1,22 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-const App = (slides) => {
+const App = ({slides}) => {
   const [index, setIndex] = useState(0);
   
-  const handlePrev = () =>{
+  const handlePrev = ()=>{
     if(index === 0){
       return;
     }
     setIndex(index-1);
   }
-  const handleNext = () =>{
+  const handleNext = ()=>{
     if(index === slides.length-1){
       return;
     }
     setIndex(index+1);
   }
-  const handleRestart = () =>{
+  const handleRestart = ()=>{
     setIndex(0);
   return (
     <>
